@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CarouselController!{% endblock %}
+
+{% block body %}
+<main>
+        <!-- BACKGROUND IMAGE-->
+        <section class="position-relative">
+            <nav class="z-2 navbar navbar-expand-lg navbar-expand-md navbar-expand-sm bg-transparent position-absolute top-0 start-50 translate-middle"
+                id="nav-padding">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse">
+                        <div class="navbar-nav ms-auto">
+                            <a class="nav-link" <a href="{{ path ('app_home')}}" id="nav-orange">Accueil</a>
+                            <a class="nav-link text-white" href="#about">À propos</a>
+                            <a class="nav-link text-white" href="#service">Prestations de service</a>
+                            <a class="nav-link text-white" href="#personnel">Gardes</a>
+                            <div>
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item bg-transparent text-black" href="#">La page</a></li>
+                                    <li><a class="dropdown-item bg-transparent text-black" href="#">Suivre</a></li>
+                                    <li><a class="dropdown-item bg-transparent text-black" href="#">Option</a></li>
+                                </ul>
+                            </div>
+                            <a class="nav-link text-white" href="#footer">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="z-0 carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for item in caroussel %}
+                        <div class="{{ item.title }}" data-bs-interval="3000">
+                            <img src="uploads/{{ item.image }}" class="d-block w-100" alt="{{ item.description }}">
+                        </div>
+                        <div class="z-1 position-absolute top-0 start-50 translate-middle" id="slogan">
+                            <p class="p-orange fw-bold">VOTRE SÉCURITÉ, NOS EFFORTS</p>
+                            <h1 style="color: #ffffff">GARDES HAUTEMENT QUALIFIÉS</h1>
+                            <button type="button" class="bg-orange fw-bold">Apprendre encore plus</button>
+                        </div>
+                    {% endfor %}
+                </div>
+                {# <button class="carousel-control-prev" type="button" data-bs-target="#carouselHead" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHead" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button> #}
+            </div>
+        </section>
+{% endblock %}

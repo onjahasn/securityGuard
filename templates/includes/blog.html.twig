@@ -1,0 +1,29 @@
+<section>
+	<div class="securite">
+		<p class="fw-bolder">BLOG RÉCENT</p>
+		<H2>DERNIÈRES NOUVEAUTÉS DE NOTRE BLOG</H2>
+	</div>
+	<div class="container">
+		<div class="row">
+			{% for item in blog %}
+				<div class="col-md-4 py-4">
+					<div class="card">
+						<img src="uploads/{{ item.illustration }}" class="card-img-top img-fluid" alt="Service">
+						<h5 class="card-title bg-dark text-white text-center">{{ item.illustrationTitle }}<span>
+								<i class="{{ item.iconLink }}"></i>
+							</span>
+						</h5>
+						<div class="admin">
+							<i class="{{ item.iconCategory }}"></i>
+							<p>{{ item.category }}</p>
+							<i class="{{ item.adminIcon }}"></i>
+							<p>{{ item.admin }}</p>
+							<i class="{{ item.messageIcon }}"></i>
+							<p>{{ item.message }}</p>
+						</div>
+						<p class="card-text">{{ item.authorIcon }}.</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>

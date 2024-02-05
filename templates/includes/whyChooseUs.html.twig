@@ -1,0 +1,36 @@
+<section class="container mb-5">
+	<div class="row mt-5">
+		<div class="col pe-md-4">
+			<div class="my-2">
+				<p class="fw-bolder">{{ whyDetails.title }}</p>
+				<h2>{{ whyDetails.subtitle }}</h2>
+				<img src="uploads/{{ whyDetails.illustration }}" alt="futur">
+				<div class="text-under-image">
+					<p class="">{{ whyDetails.description }}</p>
+					</p>
+					<h5 id="pod">Apprendre encore plus</h5>
+				</div>
+			</div>
+		</div>
+		<div class="col pe-md-4 d-flex">
+			<div class="row">
+				{% for item in whyChooseUs %}
+					{% if loop.index % 3 == 1 %} {#  chaque troisième élément de la boucle crée une nouvelle colonne. #}
+								</div><div class="col">
+					{% endif %}
+					<div class="m-2">
+							<div class="d-flex">
+									<div class="flaticon2">
+											<i class="{{ item.icon }}"></i>
+									</div>
+									<div class="ms-2">
+											<h4>{{ item.category }}</h4>
+											<p>{{ item.description }}</p>
+									</div>
+							</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	</section>

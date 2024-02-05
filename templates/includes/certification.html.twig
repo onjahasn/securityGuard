@@ -1,0 +1,15 @@
+<section class="row pt-5">
+	{% for item in certification %}
+		<div class="col-md-4 mb-4">
+			<div class="d-flex border-end">
+				<div class="flaticon1">
+					<i class="{{ item.icon }}"></i>
+				</div>
+				<div class="p-4">
+					<h4>{{ item.title }}</h4>
+					<p>{{ item.description | raw}}</p>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</section>

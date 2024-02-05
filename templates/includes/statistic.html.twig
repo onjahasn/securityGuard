@@ -1,0 +1,11 @@
+<section class="container-fluid">
+	<div class="d-flex" id="statistics">
+		{% for item in statistic %}
+			<div>
+				<i class="{{ item.icon }}"></i>
+				<h2 class="text-center">{{ item.value }}</h2>
+				<p>{{ item.category }}</p>
+			</div>
+		{% endfor %}
+	</div>
+</section>

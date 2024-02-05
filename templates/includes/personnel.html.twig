@@ -1,0 +1,41 @@
+<section id="personnel">
+	<div class="securite">
+		<p class="fw-bolder">AGENTS DE SECURITÉ</p>
+		<h2>RENCONTREZ NOS AGENTS DE SECURITÉ</h2>
+	</div>
+	<div class="container text-center">
+        <div class="row mb-5">
+            {% for agent in personnel %}  {# il y a 4 elements dans la collection, on commence a compter par 1 #}
+                {% if loop.index % 2 == 0 %}  {# loop = 1, 1 est impair donc ce bloc ne s'execute pas au premier tour mais il va le faire en ligne 38 #}
+                <div class="col">
+                    <img class="miniature" src="uploads/{{ agent.image }}" alt="officer">
+                </div>
+                {% endif %}
+                {% if loop.index % 2 == 1 %}
+                    <div class="col text-end mt-5">
+                {% else %}
+                    <div class="col text-start mt-5">
+                {% endif %}           
+                        <h5>{{ agent.officer_name }}</h5>
+                        <h6>{{ agent.designation }}</h6>
+                        <p>{{ agent.description }}</p>
+                        <div class="social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                {% if loop.index % 2 == 1 %}  {# 1 est impair donc le code s'execute #}
+                <div class="col">
+                    <img class="miniature" src="uploads/{{ agent.image }}" alt="officer">
+                </div>
+                {% endif %}
+
+                {% if loop.index == 2 %}
+                    </div><div class="row mb-5">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

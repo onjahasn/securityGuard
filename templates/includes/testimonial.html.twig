@@ -1,0 +1,28 @@
+<section class="bg-light">
+	<div class="securite">
+		<p class="fw-bolder">TÉMOIGNAGE</p>
+		<h2>CE QUE DISENT NOS CLIENT</h2>
+	</div>
+	<div class="container">
+		<div class="row p-5 mb-4">
+			{% for item in testimonial %}
+				<div class="col">
+					<div class="col border p-4 bg-white bubble mb-5">
+						<p>{{ item.content }}</p>
+					</div>
+					<div class="col">
+						<div class="image">
+							<img class="card-img-top" src="uploads/{{ item.image }}" alt="testimonial">
+						</div>
+						<div>
+							<h5>
+								<span>{{item.authorName}}</span>
+							</h5>
+							<P>{{item.poste}}</P>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

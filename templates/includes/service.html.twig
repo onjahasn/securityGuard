@@ -1,0 +1,22 @@
+<section class="mt-5" id="service">
+	<div class="securite">
+		<p class="fw-bolder">NOS SERVICES</p>
+		<h2 class="titre">SERVICES DE SECURIT&Eacute HAUT DE GAMME</h2>
+	</div>
+	<div class="container security">
+		<div class="row">
+			{% for item in service %}
+				<div class="col-md-6 col-lg-4 mb-4 pb-3">
+					<div class="card mb-2 p-3">
+						<img class="card-img-top" src="uploads/{{ item.illustration }}" alt="Logo">
+						<div class="card-body bg-dark d-flex align-items-center p-0">
+							<h3 class="{{ item.title }} font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center text-white m-0 mr-3" style="width: 45px; height: 45px; background: #e45f4e;"></h3>
+							<h5 class="card-title text-white text-truncate m-0">{{ item.subtitle }}</h5>
+						</div>
+						<div class="card-footer">{{ item.description }}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -1,3 +1,262 @@
-body {
-    background-color: skyblue;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* BACKGROUND IMAGE */
+#slogan {
+  padding-top: 60%;
+  text-align: center;
+}
+
+/* Padding de la nav maison */
+#nav-padding {
+  padding-top: 100px;
+}
+
+.bg-orange {
+  position: absolute;
+  font-size: larger;
+  color: #FFFFFF;
+  background-color: #e45f4e;
+  padding: 15px;
+  margin-top: 30px;
+  width: 250px;
+  left: 28%;
+}
+
+.p-orange {
+  color: #e45f4e;
+  font-size: 25px;
+}
+
+/* Pour la nav maison */
+#nav-orange {
+  color: #e45f4e;
+  font-weight: bold;
+}
+
+/* PROFESSIONNEL PERSONNEL */
+.flaticon1 i {
+  color: #e45f4e;
+  font-size: 50px !important;
+}
+
+/* A propos dans 15 ans d'experience */
+.fw-bolder {
+  color: #e45f4e;
+  font-size: 20px;
+}
+
+#podcast {
+  border: 2px solid #e45f4e;
+  background-color: #e45f4e;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding: 10px;
+  display: inline-flex;
+  width: auto;
+}
+
+
+/* Service de securité haut de gamme */
+.securite {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  padding: 20px; 
+}
+
+.security h5 {
+  width: 100% !important;
+  text-align: center;
+}
+
+/* les nav chiffre */
+#statistics {
+  justify-content: space-around;
+  background-color: #e45f4e;
+  padding: 90px 100px 90px !important;
+  color: #FFFFFF;
+}
+
+#statistics p {
+  font-weight: bold;
+  font-size: smaller;
+}
+
+#statistics i {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: #FFFFFF solid 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 40px !important;
+}
+
+/* Securité de haut niveau */
+.flaticon2 i {
+  background-color: #e45f4e;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding: 4px;
+}
+
+#pod {
+  border: 2px solid #e45f4e;
+  background-color: #e45f4e;
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 15px;
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+/* Abonnez-vous à notre newsletter */
+.bg-rouge {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: larger;
+  color: #FFFFFF;
+  padding: 15px;
+  background-color: #e45f4e !important;
+}
+
+/* Rencontrez nos agents */
+.social i {
+  color: #e45f4e !important;
+}
+
+.miniature {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+/* Ce que disent nos client */
+.image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50;
+  margin-bottom: 20px;
+}
+
+.image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.bubble {
+  position: relative;
+  background: #ffffff;
+  border-radius: .4em;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-top-color: #ffffff;
+  border-bottom: 0;
+  margin-left: -14px;
+  margin-bottom: -12px;
+}
+
+/* Dernières nouveautés */
+.link {
+  font-size: 20px;
+  background-color: #e45f4e;
+  color: #FFFFFF;
+  padding: 10px;
+  float: right;
+}
+
+.admin {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.admin i {
+  color: #e45f4e;
+}
+
+/* footer */
+li {
+  color: #FFFFFF;
+}
+
+.icon i {
+  border-radius: 50%;
+  border: #FFFFFF solid 2px;
+  padding: 8px 9px;
+}
+
+
+/* Media query pour les écrans de taille moyenne */
+@media screen and (max-width: 992px) {
+
+  .bg-orange {
+    margin-left: -20%;
+    padding: 6px;
+    margin-top: 30px;
+    width: 250px;
+  }
+
+  .p-orange {
+    font-size: 20px;
+  }
+}
+
+/* Media query pour les écrans de petite taille */
+@media screen and (max-width: 800px) {
+
+  .bg-orange {
+    margin-left: -20%;
+    font-size: 19px;
+    padding: 0%;
+  }
+
+  .p-orange {
+    font-size: 17px;
+  }
+}
+
+/* Media query pour les écrans très petits, comme les smartphones en mode portrait */
+@media screen and (max-width: 480px) {
+  
+  .bg-orange {
+    margin-left: -35%;
+    font-size: 14px;
+    padding: 0%;
+  }
+
+  .p-orange {
+    font-size: 12px;
+  }
 }

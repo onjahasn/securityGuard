@@ -1,0 +1,63 @@
+<footer class="bg-dark py-4" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img src="uploads/{{ infoFooter.logoFooter }}" alt="footer" class="img-fluid">
+                    <p class="text-white mt-3">{{ infoFooter.content }}</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mt-4 mt-lg-0">
+                    <p class="fw-bold text-white">LIENS RAPIDES</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-angle-right"></i> Maison</li>
+                        <li><i class="fa-solid fa-angle-right"></i> A propos de nous</li>
+                        <li><i class="fa-solid fa-angle-right"></i> Nos services</li>
+                        <li><i class="fa-solid fa-angle-right"></i> Notre équipe</li>
+                        <li><i class="fa-solid fa-angle-right"></i> Contactez-nous</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mt-4 mt-lg-0">
+                    <p class="fw-bold text-white">LIENS RAPIDES</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-angle-right"></i> Maison</li>
+                        <li><i class="fa-solid fa-angle-right"></i> A propos de nous</li>
+                        <li><i class="fa-solid fa-angle-right"></i> Nos services</li>
+                        <li><i class="fa-solid fa-angle-right"></i> Notre équipe</li>
+                        <li><i class="fa-solid fa-angle-right"></i> Contactez-nous</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                    <div>
+                        <p class="fw-bold text-white">ENTRE EN CONTACT</p>
+                        <ul class="list-unstyled">
+                        {% for item in infoContact %}
+                            <li><i class="fa-solid fa-location-dot"></i> {{ item.description }}</li>                      
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="icon d-flex">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white mt-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-dark bg-dark">
+                        <div class="container">
+                            <p class="text-white mb-0"><i class="fa-regular fa-copyright"></i> <strong>Nom de votre
+                                    site.</strong> Tous droits réservés. Conçu par <strong>HTML Codex</strong></p>
+                            <div class="text-white d-flex">
+                                <p class="me-4">Confidentialité</p>
+                                <p class="me-4">Termes</p>
+                                <p class="me-4">FAQ</p>
+                                <p class="me-4">Aide</p>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
